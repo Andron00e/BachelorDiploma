@@ -1,0 +1,85 @@
+\documentclass[a4paper,14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{amssymb}
+\usepackage{amsmath}
+%%%%%%%%%%%%%%%%
+\usepackage{amsfonts} 
+%\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+%%%%%%%%%%%%%%%%
+\usepackage{mathrsfs}
+\usepackage{euscript}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{wrapfig}
+\usepackage{subfigure}
+\usepackage{url}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{bm}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{pdfpages}
+\usepackage{booktabs,dcolumn,caption}      
+\usepackage{cleveref} 
+%\usepackage{algorithm,algorithmic}
+\usepackage{algorithm}
+%\usepackage{algorithm2e}
+\usepackage{algpseudocode}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[toc,page]{appendix}
+
+\usepackage{comment}
+\usepackage{rotating}
+
+% \DeclareMathOperator*{\argmax}{arg\,max}
+% \DeclareMathOperator*{\argmin}{arg\,min}
+
+% \newtheorem{theorem}{Теорема}
+% \newtheorem{lemma}[theorem]{Лемма}
+% \newtheorem{definition}{Определение}[section]
+
+\numberwithin{equation}{section}
+
+\newcommand*{\No}{No.}
+\bibliographystyle{gost71u}
+
+\begin{document}
+
+% Титульный лист
+%\input{./frontpage.tex}
+\includepdf[pages=-]{./title.pdf}
+
+% Аннотация
+\input{./0_annotation.tex}
+
+% Нумерация должна начинаться со второй страницы
+\setcounter{page}{2}
+
+% Оглавление
+\newpage
+\tableofcontents
+
+% Обозначения и сокращения
+% \input{./dict.tex}
+
+\input{./1_introduction.tex}
+\input{./2_relatedworks.tex}
+\input{./3_problemstatement.tex}
+\input{./4_experiments.tex}
+\input{./5_discussion.tex}
+
+\bibliography{ref}
+\input{./appendix.tex}
+\end{document}
